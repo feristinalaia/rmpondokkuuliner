@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Form Testimoni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Berikan Testimoni Anda</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nama</ion-label>
+        <ion-input [(ngModel)]="nama" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Isi Testimoni</ion-label>
+        <ion-textarea [(ngModel)]="isi" autoGrow="true"></ion-textarea>
+      </ion-item>
+
+      <ion-button expand="full" color="success" (click)="kirimTestimoni()">
+        Kirim Testimoni
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

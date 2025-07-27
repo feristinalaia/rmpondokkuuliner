@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Data Testimoni</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Pull to refresh -->
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- Daftar testimoni -->
+  <ion-list *ngIf="testimoniList.length > 0; else kosong">
+    <ion-item *ngFor="let item of testimoniList">
+      <ion-label>
+        <h2>{{ item.nama }}</h2>
+        <p>{{ item.isi }}</p>
+        <small *ngIf="item.created_at">{{ item.created_at | date:'short' }}</small>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tampilkan jika kosong -->
+  <ng-template #kosong>
+    <ion-text color="medium">
+      <p class="ion-text-center">Belum ada testimoni.</p>
+    </ion-text>
+  </ng-template>
+
+</ion-content>

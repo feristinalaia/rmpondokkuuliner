@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Beranda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h2>Selamat Datang!</h2>
+  <p>Silakan lakukan pemesanan makanan & minuman melalui aplikasi ini.</p>
+
+  <!-- Gambar Rumah Makan -->
+  <ion-card>
+    <img src="assets/nasi.jpg" alt="Menu Rumah Makan" />
+    <ion-card-header>
+      <ion-card-title>Rumah Makan Pondok Kuliner</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Nikmati cita rasa khas Padang yang autentik dan menggugah selera!
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Info Jam Buka dan Alamat -->
+  <ion-list>
+    <ion-item>
+      <ion-icon name="time" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h3>Jam Buka</h3>
+        <p>Setiap hari, 10.00 - 22.00 WIB</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="location" slot="start" color="primary"></ion-icon>
+      <ion-label>
+        <h3>Alamat</h3>
+        <p>Jalan Makan Enak No.23, Medan, Sumatera Utara</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tombol ke Form Pemesanan -->
+  <ion-button expand="block" color="success" [routerLink]="['/tabs/tab2']">
+    Pesan Sekarang
+  </ion-button>
+
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "rmpondokkuuliner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

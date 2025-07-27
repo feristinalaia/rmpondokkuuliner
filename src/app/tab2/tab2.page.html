@@ -1,0 +1,84 @@
+<ion-header> 
+  <ion-toolbar color="primary">
+    <ion-title>Pemesanan Makan & Minum</ion-title> 
+    <ion-buttons slot="start"> 
+      <ion-back-button></ion-back-button> 
+    </ion-buttons> 
+  </ion-toolbar> 
+</ion-header> 
+
+<ion-content class="ion-padding"> 
+  <ion-card class="welcome-card bg-content"> 
+    <ion-card-header> 
+      <ion-card-title color="primary">Pemesanan Makan & Minum </ion-card-title> 
+    </ion-card-header> 
+    <ion-card-content> 
+      <p>Silakan isikan form dibawah untuk pemesanan anda!.</p> 
+      <ion-list> 
+        <ion-item> 
+          <ion-label position="floating"> No Meja </ion-label> 
+          <ion-input type="text" [(ngModel)]="nomeja"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-label position="floating"> Nama lengkap </ion-label> 
+          <ion-input type="text" [(ngModel)]="nama"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-label position="floating"> Nomor HP/WA </ion-label> 
+          <ion-input type="text" [(ngModel)]="nohp"></ion-input> 
+        </ion-item>
+        <ion-item> 
+          <ion-label position="floating"> Email </ion-label> 
+          <ion-input type="email" [(ngModel)]="email"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-label position="floating"> Alamat</ion-label> 
+          <ion-input type="alamat" [(ngModel)]="alamat"></ion-input> 
+        </ion-item> 
+        <ion-item> 
+          <ion-label position="floating"> Menu Makanan </ion-label> 
+          <ion-select [(ngModel)]="menumakanan" placeholder="Pilih menu makanan"> 
+            <ion-select-option value="rendangdaging">Rendang Daging</ion-select-option> 
+            <ion-select-option value="ayamsemur">Ayam Semur</ion-select-option> 
+            <ion-select-option value="ayamrendang">Ayam Rendang</ion-select-option> 
+            <ion-select-option value="ayamgoreng">Ayam Goreng</ion-select-option> 
+            <ion-select-option value="ayamsambalhijau">Ayam Sambal Hijau</ion-select-option> 
+            <ion-select-option value="ayamkalasan">Ayam Kalasan</ion-select-option> 
+            <ion-select-option value="ayambakar">Ayam Bakar</ion-select-option> 
+            <ion-select-option value="ayamgulai">Ayam Gulai</ion-select-option> 
+            <ion-select-option value="perkedel">Perkedel</ion-select-option> 
+            <ion-select-option value="telurdadar">Telur Dadar</ion-select-option> 
+            <ion-select-option value="ikanbakar">Ikan Bakar</ion-select-option> 
+            <ion-select-option value="ikansambal">Ikan Sambal</ion-select-option> 
+            <ion-select-option value="ikangulai">Ikan Gulai</ion-select-option>  
+          </ion-select> 
+        </ion-item> 
+        <ion-item> 
+          <ion-label position="floating"> Menu Minuman </ion-label> 
+          <ion-select [(ngModel)]="menuminuman" placeholder="Pilih menu minuman"> 
+            <ion-select-option value="estehmanis">Es Teh Manis</ion-select-option> 
+            <ion-select-option value="tehmanishangat">Teh Manis Hangat</ion-select-option> 
+            <ion-select-option value="esjeruk">Es Jeruk</ion-select-option> 
+            <ion-select-option value="airmineral">Air Mineral</ion-select-option> 
+          </ion-select> 
+        </ion-item> 
+        <ion-item>
+         <ion-label position="floating"> Tipe Pembayaran </ion-label> 
+          <ion-select [(ngModel)]="tipepembayaran" placeholder="Pilih tipe pembayaran  "> 
+            <ion-select-option value="cash">Cash</ion-select-option> 
+            <ion-select-option value="qris">Qris</ion-select-option> 
+            <ion-select-option value="transer">Transfer</ion-select-option> 
+            <ion-select-option value="debit">Debit</ion-select-option> 
+          </ion-select> 
+        </ion-item>
+      </ion-list> 
+      
+      <div class="ion-padding"> 
+        <ion-button expand="block" color="primary" size="medium" (click)="addPemesanan()"> 
+          <ion-icon name="trending-up-outline"></ion-icon> 
+          Daftar
+        </ion-button> 
+      </div> 
+    </ion-card-content>   
+  </ion-card> 
+</ion-content>
